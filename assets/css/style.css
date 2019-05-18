@@ -1,0 +1,41 @@
+/*Colors:
+#104F55
+#32746D
+#9EC5AB
+#01200F
+#011502
+*/
+
+html{
+	background-color:#32746D;
+	color:#011502;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	font-size:36px;
+	font-weight:bold;
+}
+
+.content{
+	background-color:#9EC5AB;
+	width:70%;
+	padding:20px;
+	margin:20px auto;
+}
+.button-container{
+
+}
+button{
+	border-radius:10px;
+	padding:4px;
+	background-color:#011502;
+	color:white;
+}
+
+button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
