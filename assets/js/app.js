@@ -36,6 +36,9 @@ var animals = ["Cat", "Dog", "Rabbit", "Skunk","Goldfish"];
 		animalImage.attr("class","gif");
 		animalImage.attr("data-still",results[i].images.fixed_height_still.url);
 		animalImage.attr("data-animate",results[i].images.fixed_height.url);
+		animalImage.attr("data-state","still");
+		
+
 		
 		
 
@@ -48,20 +51,25 @@ var animals = ["Cat", "Dog", "Rabbit", "Skunk","Goldfish"];
 	  }
 	});
   }
-  $(".gif").on("click", function() {
+
+  $(document).on("click", ".gif", function() {
 	// The attr jQuery method allows us to get or set the value of any attribute on our HTML element
 	var state = $(this).attr("data-state");
+	console.log(this)
 	// If the clicked image's state is still, update its src attribute to what its data-animate value is.
 	// Then, set the image's data-state to animate
 	// Else set src to the data-still value
 	if (state === "still") {
 	  $(this).attr("src", $(this).attr("data-animate"));
 	  $(this).attr("data-state", "animate");
+	  console.log("animate");
 	} else {
 	  $(this).attr("src", $(this).attr("data-still"));
 	  $(this).attr("data-state", "still");
+	  console.log("still");
 	}
   });
+
  // Function for displaying animals data
  function renderButtons() {
 
